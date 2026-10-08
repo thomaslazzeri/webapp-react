@@ -13,6 +13,7 @@ export const Destination = () => {
 
     useEffect(() => {
         setLoading(true);
+        setError(null);
         axios.get(`${API_URL}/${id}`)
             .then(res => setPlace(res.data))
             .catch(err => {
@@ -29,7 +30,7 @@ export const Destination = () => {
 
     return (
         <div>
-            <Link to='/destinations'>Torna alle destinazioni</Link>
+            <Link to='/'>← Torna alle destinazioni</Link>
 
             <h1>{place.name}, {place.country}</h1>
             <img src={`${IMAGES_URL}/${place.image}`} alt={place.name} />

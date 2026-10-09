@@ -31,8 +31,8 @@ export const Destination = () => {
     if (error) return <p>{error}</p>;
 
     return (
-        <div>
-            <Link to='/'>← Torna alle destinazioni</Link>
+        <div className='destination'>
+            <Link to='/' className='back-link'>← Torna alle destinazioni</Link>
 
             <h1>{place.name}, {place.country}</h1>
             <img src={`${IMAGES_URL}/${place.image}`} alt={place.name} />

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { DestinationCard } from '../components/DestinationCard';
+import './Home.css';
 
 const API_URL = 'http://localhost:3000/api/places';
 

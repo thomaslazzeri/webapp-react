@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ReviewItem } from '../components/ReviewItem';
 import axios from 'axios';
+import './Destination.css';
 
 const API_URL = 'http://localhost:3000/api/places';
 const IMAGES_URL = 'http://localhost:3000/images';

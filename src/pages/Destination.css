@@ -1,0 +1,25 @@
+/* Detail */
+.destination p {
+    margin-top: 10px;
+}
+
+.destination img {
+    margin-top: 15px;
+    max-height: 400px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tags li {
+    background-color: #d3eef3;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.destination h2 {
+    margin-top: 30px;
+}

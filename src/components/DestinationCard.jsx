@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './DestinationCard.css';
 
 const IMAGES_URL = 'http://localhost:3000/images';
 

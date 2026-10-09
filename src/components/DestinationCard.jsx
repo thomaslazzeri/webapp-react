@@ -9,6 +9,6 @@ export const DestinationCard = ({ place }) => (
         <h2>{place.name}</h2>
         <p>{place.country}</p>
         <p>{Number(place.price).toFixed(2)} €</p>
-        <Link to={`/destinations/${place.id}`}>Scopri di più</Link>
+        <Link to={`/destinations/${place.id}`} className='learn-more'>Scopri di più</Link>
     </li>
 );

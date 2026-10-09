@@ -16,8 +16,13 @@
     margin-top: 10px;
 }
 
-.card a {
+.learn-more {
     display: inline-block;
     margin-top: 10px;
     color: #0b7285;
+    text-decoration: none;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
 }

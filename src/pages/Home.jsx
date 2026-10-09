@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { DestinationCard } from '../components/DestinationCard';
 
 const API_URL = 'http://localhost:3000/api/places';
-const IMAGES_URL = 'http://localhost:3000/images';
 
 export const Home = () => {
     const [places, setPlaces] = useState([]);
@@ -23,13 +22,7 @@ export const Home = () => {
             <h1>Agenzia di viaggio</h1>
             <ul className='cards'>
                 {places.map(place => (
-                    <li key={place.id} className='card'>
-                        <img src={`${IMAGES_URL}/${place.image}`} alt={place.name} />
-                        <h2>{place.name}</h2>
-                        <p>{place.country}</p>
-                        <p>{Number(place.price).toFixed(2)} €</p>
-                        <Link to={`/destinations/${place.id}`}>Scopri di più</Link>
-                    </li>
+                    <DestinationCard key={place.id} place={place} />  
                 ))}
             </ul>
         </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { ReviewItem } from '../components/ReviewItem';
 import axios from 'axios';
 
 const API_URL = 'http://localhost:3000/api/places';
@@ -49,10 +50,7 @@ export const Destination = () => {
             ) : (
                 <ul className='reviews'>
                     {place.reviews.map(review => (
-                        <li key={review.id}>
-                            <h3>{review.author} - {review.rating}/5</h3>
-                            <p>{review.text}</p>
-                        </li>
+                        <ReviewItem key={review.id} review={review} />
                     ))}
                 </ul>
             )}
